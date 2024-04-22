@@ -1,5 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', function () {
+
+    PleaseRotateOptions = {
+        //forcePortrait: true // if you would prefer to force portrait mode
+        allowClickBypass: false,
+        message: "Please Rotate Your Device. Desktop images are optimized for landscape orientation.",
+    };
+
+
     var myFullpage = new fullpage('#fullpage', {
         licenseKey: 'gplv3-license',
         sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
