@@ -1,11 +1,20 @@
+function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    PleaseRotateOptions = {
-        //forcePortrait: true // if you would prefer to force portrait mode
-        allowClickBypass: false,
-        message: "Please Rotate Your Device. Desktop images are optimized for landscape orientation.",
-    };
+    if (isMobile()) {
+        console.log("Initializing mobile only fullscreen listener")
+        document.getElementById("fullpage").addEventListener('click', (event) => {
+            event.stopPropagation();
+            if (event.target.classList.contains('fp-controlArrow') || event.target.classList.contains('contribution')) {
+                return;
+            }
+            toggleFullScreen();
+        });
+    }
 
 
     var myFullpage = new fullpage('#fullpage', {

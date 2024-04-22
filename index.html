@@ -43,12 +43,46 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+
+        function toggleFullScreen() {
+            if ((document.fullScreenElement && document.fullScreenElement !== null) ||
+                (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+                if (document.documentElement.requestFullScreen) {
+                    document.documentElement.requestFullScreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullScreen) {
+                    document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                }
+            }
+        }
+
+
+        window.fullscreeneventinit = false;
+        PleaseRotateOptions = {
+            //forcePortrait: true // if you would prefer to force portrait mode
+            allowClickBypass: false,
+            message: "Please Rotate Your Device. Desktop images are optimized for landscape orientation. Click anywhere for fullscreen mode.",
+            onHide: function () {
+
+            },
+            onShow: function () {
+            },
+        };
+    </script>
     <script src="assets/js/pleaserotate.js"></script>
     <script src="assets/js/script.js"></script>
 
-    <style>
-
-    </style>
 </head>
 
 <body>
