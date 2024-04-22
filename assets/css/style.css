@@ -1,0 +1,85 @@
+.nav {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    border: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #ffffffdb;
+    border-radius: 8px;
+    padding: 4px 10px 0px 10px;
+    border: 1px solid;
+    border-color: #0000003d;
+    box-shadow: 2px 2px 5px #00000038;
+}
+
+.contribution {
+    font-size: 1em;
+    font-family: arial, helvetica;
+    color: #b1b1b1;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+.section {
+    background-size: cover;
+    text-align: center;
+}
+
+.slide {
+    background-size: cover;
+}
+
+
+#section0 {
+    background-image: url(../img/background.jpg);
+}
+
+#slide1 {
+    background-image: url(../img/slides/onlinecruise.png);
+    padding: 0% 0 0 0;
+}
+
+#slide2 {
+    background-image: url(../img/slides/soloevening.jpg);
+    padding: 0% 0 0 0;
+}
+
+#slide3 {
+    background-image: url(../img/slides/onlinefields.png);
+    padding: 0% 0 0 0;
+}
+
+#slide4 {
+    background-image: url(../img/slides/gasstation.png);
+    padding: 0% 0 0 0;
+}
+
+#fp-nav {
+    top: 30% !important;
+}
+
+#fp-nav ul li a span {
+    background: white !important;
+}
+
+.fp-prev {
+    left: 20px;
+}
+
+.fp-next {
+    right: 20px;
+}
+
+
+.flexmain {
+    flex: 1;
+    display: flex;
+    /* if you remove this line it works on Safari */
+}
+
+.flexfooter {
+    flex: 0;
+}
